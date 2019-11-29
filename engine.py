@@ -46,3 +46,11 @@ def runEngine(updateFunc, renderFunc):
 
 def line(x1, y1, x2, y2, color = (255, 255, 255)):
 	gfx.line(screen, int(x1), int(y1), int(x2), int(y2), color)
+
+def circle(x, y, r, color = (255, 255, 255)):
+	gfx.circle(screen, int(x), int(y), int(r), color)
+
+def drawImg(img, pos, size, angle):
+	rot = pygame.transform.rotate(img, angle*180/math.pi)
+	screen.blit(img, pos)
+	pass
